@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./home.css">
+    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+    <script src="./home.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
+    <link rel="stylesheet" href="/chat/chat.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="../../utils/toast.js"></script>
+</head>
+<body>
+<h2>Lets Game ! </h2>
+<div id="card-container">
+    <div id="card-local" class="card">
+        <h3>Play locally</h3>
+        <div id="card-local-sel" class="card-choice">
+            <div class="logo-text-assoc">
+                <div><i class="fa-solid fa-robot fa-2xl fa-bounce"></i></div>
+                <p>Against Robot</p>
+            </div>
+            <div class="logo-text-assoc">
+                <div><i class="fa-solid fa-user-group fa-2xl fa-bounce"></i></div>
+                <p>1 vs 1</p>
+            </div>
+        </div>
+    </div>
+    <div id="card-online" class="card card-locked">
+        <h3>Play online</h3>
+        <div id="card-online-sel" class="card-choice">
+            <div class="logo-text-assoc">
+                <div id="logo-rand-opp"><i class="fa-solid fa-shuffle fa-2xl fa-bounce"></i></div>
+                <p>Random opponent</p>
+            </div>
+            <!-- <div class="logo-text-assoc">
+                <div><i class="fa-solid fa-address-book fa-2xl fa-bounce"></i></div>
+                <p>Against friend</p>
+            </div>-->
+            <div class="logo-text-assoc">
+                <div><i class="fa-sharp fa-solid fa-floppy-disk fa-2xl fa-bounce"></i></div>
+                <p>Load game</p>
+            </div>
+            <div id="logo-challenges" class="logo-text-assoc">
+                <div><i class="fa-sharp fa-solid fa-trophy fa-2xl fa-bounce"></i></div>
+                <p>See Challenges</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<p>&copy;<span id="year"></span>GangOfFour</p>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="turn-container">
+            <div><p>Who play first ?</p></div>
+            <span class="turn-container-choice">You</span>
+            <label class="switch">
+                <input id="cb" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <span class="turn-container-choice">Him</span>
+        </div>
+
+        <div id="separator"></div>
+
+        <p>Choose difficulty</p>
+        <div class="diff-logo-text-assoc-container">
+            <div class="logo-text-assoc">
+                <div><i class="fa-solid fa-baby-carriage fa-2xl fa-bounce"></i></div>
+                <p>Newbie</p>
+            </div>
+            <div class="logo-text-assoc">
+                <div><i class="fa-solid fa-brain fa-2xl fa-bounce"></i></div>
+                <p>Confirmed</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+<script>
+    let user = localStorage.getItem("user");
+    console.log(user)
+    if (user !== 'undefined') {
+        try {
+            user = JSON.parse(user);
+        } catch (e) {
+            console.error("Invalid JSON in user:", user, e);
+        }
+    }
+</script>
+</html>
+

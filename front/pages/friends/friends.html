@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/header/header.css">
+    <link rel="stylesheet" href="./friends.css">
+    <link rel="stylesheet" href="/chat/chat.css">
+    <link rel="icon" href="/images/logo.ico?v=1.1">
+
+    <script src = "./friends.js"></script>
+    <script src = "../../header/header.js"></script>
+    <script src="/chat/chat.js" defer></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+    <title>My friends</title>
+</head>
+<body>
+    <header>
+        <script id="replace_with_navbar" src="/utils/nav.js"></script>
+    </header>
+    <main>
+        <h2>My friends</h2>
+        <ul id="friends-list"></ul>
+        <h2>Search for new</h2>
+        <input id= "searchFriend">
+        <button>Search</button>
+        <ul id="searched-friends-list"></ul>
+    </main>
+</body>
+</html>

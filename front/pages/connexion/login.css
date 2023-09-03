@@ -1,0 +1,95 @@
+@import "../../utils/toast.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Gabriola, cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-image: url("../../images/logo-img.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5px;
+}
+
+form {
+    width: 400px;
+    margin: 10px auto auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 7px;
+    background-color: #87CEFA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Gabriola, cursive;
+    font-size: 25px;
+}
+
+button:hover {
+    background-color: #0287f5;
+}
+
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side{
+    display: flex;
+    align-items: center;
+    width: 50%;
+
+}
+
+.side img{
+    width: 300px;
+    height: 300px;
+
+}
+
+
+

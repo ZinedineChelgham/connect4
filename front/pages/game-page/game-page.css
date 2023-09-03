@@ -1,0 +1,374 @@
+@import "../../utils/toast.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+body {
+  text-align: center;
+  background-color: #F0F8FF;
+}
+body #winner {
+  margin-top: 20px;
+}
+body p {
+  font-family: fantasy;
+  font-size: 1.5em;
+}
+body h1, body h2, body h3 {
+  font-family: fantasy;
+  font-size: 2.5em;
+}
+body #matchup {
+  display: flex;
+  height: 90px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 800px;
+  margin: 15px auto 5px;
+}
+body #matchup #p1, body #matchup #p2 {
+  width: 250px;
+}
+body #matchup .turn-display {
+  text-decoration: black underline 3px;
+  font-size: 2.7em;
+}
+body #matchup .matchup-circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+body #matchup .matchup-circle-zoom {
+  height: 53px;
+  width: 53px;
+}
+body #matchup > p {
+  font-family: Gabriola, cursive;
+  font-size: 4em;
+  rotate: 3.5deg;
+  font-weight: bold;
+}
+body #matchup #p1, body #matchup #p2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body #countdown {
+  font-size: 7em;
+}
+body #top-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 60px;
+  margin: 15px auto 10px;
+}
+body #board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  height: 440px;
+  background-color: #87CEFA;
+  border: 9px solid black;
+  border-radius: 4%;
+  margin: 0 auto;
+}
+body #board > div {
+  border-radius: 50%;
+}
+body #board .show-col {
+  background-color: #87CEFA;
+  opacity: 0.5;
+}
+body .circle {
+  height: 60px;
+  width: 60px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+body .invisible-circle {
+  height: 60px;
+  width: 60px;
+  margin: 8px;
+}
+body .win-circle {
+  border: 6px solid #05f83b;
+}
+
+#b-save-game{
+  margin-top: 1.3rem;
+  font-size: 1rem;
+}
+
+#b-save-game:hover{
+  cursor: pointer;
+  opacity: 0.6;
+
+
+}
+
+body #end-game-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  opacity: 0.99;
+}
+body #end-game-modal .modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 280px;
+  background-color: white;
+  border-radius: 4%;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+}
+body #end-game-modal h2 {
+  font-size: 2.8em;
+}
+body #end-game-modal h3 {
+  font-size: 1.6em;
+}
+body #end-game-modal p {
+  font-size: 1.2em;
+}
+body #end-game-modal #btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  height: 40px;
+  width: 100%;
+  z-index: 2;
+}
+body #end-game-modal #btn-group > button {
+  align-self: flex-end;
+  text-align: center;
+  font-family: fantasy;
+  background-color: #F0F8FF;
+  font-size: 1em;
+  width: 75%;
+  height: 100%;
+  margin: 10px;
+  border: 4px solid black;
+  transition: transform 0.15s ease-in-out;
+}
+body #end-game-modal #btn-group > button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+body .spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 13px;
+}
+body .spinner-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+body .spinner-dot {
+  width: 30px;
+  height: 30px;
+  margin: 0 5px;
+  background-color: #044dec;
+  border-radius: 50%;
+  animation: spinner 0.95s infinite ease-in-out;
+}
+body .spinner > p {
+  font-size: xx-large;
+  display: block;
+}
+body .spinner-dot:nth-child(2) {
+  animation-delay: -0.2s;
+}
+body .spinner-dot:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes spinner {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes buttonClick {
+  from {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+.clicked {
+  animation: buttonClick 0.2s ease-in-out;
+}
+
+.circle-fall {
+  animation: fall;
+}
+
+.white-title {
+  color: white;
+}
+
+.green-title {
+  color: #05f83b;
+}
+
+.red-title {
+  color: red;
+}
+
+.yellow-title {
+  color: #eeea02;
+}
+
+.red-circle {
+  background-color: red;
+}
+
+.yellow-circle {
+  background-color: yellow;
+}
+
+.purple-circle {
+  background-color: #F0F8FF;
+}
+
+.raindrop {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  animation: falling 1s ease-in-out infinite;
+}
+
+#button-container {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  padding: 10px;
+}
+
+#message-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.message-button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+#btn-display {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.bubble {
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  padding: 10px 20px;
+  max-width: 70%;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.sent {
+  align-self: flex-start;
+}
+
+.received {
+  align-self: flex-end;
+  background-color: #0084ff;
+  color: #fff;
+}
+
+.rotate{
+  animation-name: funny-rotate;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes funny-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+/*# sourceMappingURL=game-page.css.map */

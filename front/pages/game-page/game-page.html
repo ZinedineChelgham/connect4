@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="./game-page.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script  src="./game-page.js" defer></script>
+    <script src="game-page-serv.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
+    <link rel="stylesheet" href="/chat/chat.css">
+    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+    <script src="../../utils/toast.js"></script>
+</head>
+<body>
+    <main>
+        <div id="matchup">
+            <div id="button-container">
+                <button id="btn-display" style="display:none">Chat</button>
+                <div id="message-buttons">
+                    <button id="Loser" class="message-button" data-message="Loser" style="display:none">Loser</button>
+                    <button id="Ahhhhh" class="message-button" data-message="Ahhhhh" style="display:none">Ahhhhh
+                    </button>
+                    <button id="Cheh" class="message-button" data-message="Cheh" style="display:none">Cheh</button>
+                </div>
+                <div id="message-list"></div>
+            </div>
+            <div id="p1">
+                <div class="matchup-circle red-circle"></div>
+                <p id="username">1</p>
+            </div>
+            <p>VS</p>
+            <div id="p2">
+                <div class="matchup-circle yellow-circle"></div>
+                <p id="opponent">2</p>
+            </div>
+        </div>
+        <p id="countdown"></p>
+        <div id="time-display"></div>
+        <div id="top-row"></div>
+        <div id="board"></div>
+        <div id="b-save-game" style="visibility: hidden">
+            <i class="fa-sharp fa-solid fa-floppy-disk fa-2xl"></i>
+            <p>Save current game state</p>
+        </div>
+    </main>
+
+
+    <div id="end-game-modal">
+        <div class="modal-content">
+            <h2 id="winner"></h2>
+            <h3 id="points"></h3>
+            <div id="btn-group">
+                <button>Back to the menu</button>
+                <button>Play again</button>
+            </div>
+
+        </div>
+    </div>
+
+    <aside></aside> <!-- chat -->
+
+    <footer></footer>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+</body>
+</html>

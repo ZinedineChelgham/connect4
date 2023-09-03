@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranking Page</title>
+    <link rel="stylesheet" href="ranking.css">
+    <link rel="stylesheet" href="/header/header.css">
+    <script src = "/header/header.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
+    <link rel="stylesheet" href="/chat/chat.css">
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <script id="replace_with_navbar" src="/utils/nav.js"></script>
+</header>
+<div id="podium">
+    <div class="place">
+        <div class="medal">1</div>
+        <div class="username"></div>
+    </div>
+    <div class="place">
+        <div class="medal">2</div>
+        <div class="username"></div>
+    </div>
+    <div class="place">
+        <div class="medal">3</div>
+        <div class="username"></div>
+    </div>
+</div>
+
+<table id="userRankingTable">
+    <thead>
+    <tr>
+        <th>Rank</th>
+        <th>Username</th>
+        <th>Ranking Score</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- User data will be dynamically added here -->
+    </tbody>
+</table>
+
+<script src="ranking.js"></script>
+</body>
+</html>

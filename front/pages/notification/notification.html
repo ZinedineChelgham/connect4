@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./notifications.css">
+    <link rel="stylesheet" href="/header/header.css">
+
+    <script src = "./notifications.js"></script>
+    <script src = "/header/header.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+
+    <link rel="stylesheet" href="/chat/chat.css">
+    <link rel="icon" href="/images/logo.ico?v=1.1">
+    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <script id="replace_with_navbar" src="/utils/nav.js"></script>
+    </header>
+    <main>
+        <h2>Notifications center</h2>
+        <input id= "searchNotification">
+        <button>Search</button>
+        <ul id="notifications-list"></ul>
+    </main>
+</body>
+</html>

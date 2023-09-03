@@ -1,0 +1,39 @@
+{
+  "name": "ps8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "back/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env JWT_SECRET=gangoffour nodemon --legacy-watch ./back/index.js",
+    "start": "node ./back/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminvella/ps8.git"
+  },
+  "author": "Benjamin Vella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminvella/ps8/issues"
+  },
+  "homepage": "https://github.com/benjaminvella/ps8#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "elo-rating": "^1.0.1",
+    "js-sha256": "^0.9.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongodb": "^5.0.1",
+    "mongoose": "^6.9.1",
+    "nanoid": "^4.0.2",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.4",
+    "url": "^0.11.0",
+    "uuid": "^9.0.0",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

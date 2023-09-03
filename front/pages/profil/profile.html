@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="/header/header.css">
+    <link rel="stylesheet" href="/chat/chat.css">
+    <link rel="icon" href="/images/logo.ico?v=1.1">
+
+    <script src="profile.js"></script>
+    <script src="/header/header.js" defer></script>
+    <script src="/chat/chat.js" defer></script>
+    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+
+<body>
+<header>
+    <script id="replace_with_navbar" src="/utils/nav.js"></script>
+</header>
+<main>
+    <div id="container">
+        <div id="profil-form-container">
+            <h1>User Profile</h1>
+            <div>
+                <label for="username">Username:</label>
+                <span id="username"></span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <span id="email"></span>
+            </div>
+            <div>
+                <label for="ranking">rank:</label>
+                <span id="ranking"></span>
+            </div>
+            <div>
+                <label id="lab-challenge" for="challenges">Challenges Completed:</label>
+                <span id="challenges"></span>
+            </div>
+        </div>
+        <div id="chart-container">
+            <button id="edit-profile-btn" class="edit-profile-btn">Edit Profile</button>
+            <div style="display: flex; justify-content: space-around; align-items: center">
+                <button id="play-btn" class="edit-profile-btn">Play</button>
+                <button id="chat-btn" class="edit-profile-btn">Chat with your friend !</button>
+            </div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+#toast-message {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 35%;/* red background color */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: none;
+    border-radius: 11px; /* rounded corners */
+    font-size: 28px; /* larger font size */
+    font-weight: bold; /* bold font weight */
+    font-family: Gabriola, cursive, sans-serif;
+    z-index: 2;
+    margin-top: 0.7rem;
+}
+
+.success{
+    background-color: #0cd30c;
+}
+
+.error{
+    background-color: red;
+}
+
+.warning{
+    background-color: #fa8704;
+}
+
+

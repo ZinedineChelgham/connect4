@@ -1,0 +1,33 @@
+version: latest
+services:
+  mongo:
+    image : mongo:latest
+    build: ./Dockerfilemongo
+    container_name: mongo
+    volumes:
+      - volume:/data/db
+      - config:/data/configdb
+    environment:
+      JWT_SECRET: gangoffour
+    ports:
+      - "27027:27017"
+  node:
+    image: node:latest
+    restart: always
+    build: .
+    ports:
+      - "80:8000"
+    volumes:
+      - ./:/code
+    environment:
+      DATABASE_URL: mongo://mongo:27017/
+      JWT_SECRET: gangoffour
+    depends_on:
+      - 'mongo'
+volumes:
+  volume:
+  config:
+
+networks:
+  default:
+    driver: bridge

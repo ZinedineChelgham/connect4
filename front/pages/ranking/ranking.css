@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#userRankingTable{
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin-top: 20px;
+}
+
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+#podium {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+#podium .place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    position: relative;
+}
+
+#podium .place .medal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: gold;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+#podium .place:nth-child(2) .medal {
+    background-color: silver;
+}
+
+#podium .place:nth-child(3) .medal {
+    background-color: #cd7f32;
+}
+
+#podium .place .username {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 45px;
+    margin-left: 2px;
+    color: #0c0a0a;
+    text-align: center;
+    top: -100px;
+    z-index: 1;
+}
