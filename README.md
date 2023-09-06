@@ -14,6 +14,8 @@
 
 ![404](img_5.png)
 
+## Architecture
+
 The code of this repo is split in 2 folders:
 * back/ manages the server. It contains a server which differentiate REST requests from HTTP file requests, and so
 return either files or REST responses accordingly.
