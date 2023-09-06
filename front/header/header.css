@@ -1,3 +1,6 @@
+@import '../global.css';
+
+
 * {
     margin: 0;
     padding: 0;
@@ -11,26 +14,26 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #87CEFA;
+    background: var(--main-color);
     height: 4.5em;
 
 }
 
-.navbar-left{
+.navbar-left {
     width: 32.5%;
 }
 
-.navbar-right{
+.navbar-right {
     width: 33.3%;
     text-align: right;
 }
 
-.navbar-middle{
+.navbar-middle {
     width: 33.3%;
     text-align: center;
 }
 
-.navbar-title{
+.navbar-title {
     width: 100%;
     font-size: 3.3rem;
     font-weight: bold;
@@ -39,7 +42,7 @@ nav {
     color: #0c0a0a;
 }
 
-.navbar-brand{
+.navbar-brand {
     font-size: 2.2rem;
     font-weight: bold;
     font-family: Gabriola, cursive;
@@ -63,9 +66,6 @@ nav {
     transform: scale(1.5);
     transition: 0.4s;
 }
-
-
-
 
 
 .dropdown-menu {

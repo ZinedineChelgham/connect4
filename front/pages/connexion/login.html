@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Log In</title>
-    <link rel="stylesheet" href="./login.css">
-    <link rel="stylesheet" href="../../header/header.css">
-    <script src="../../header/header.js" defer></script>
-    <script  src="./login.js"></script>
+    <link href="./login.css" rel="stylesheet">
+    <link href="../../header/header.css" rel="stylesheet">
+    <script defer src="../../header/header.js"></script>
+    <script src="./login.js"></script>
     <script src="../../utils/toast.js"></script>
-    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d3ba58047a.js"></script>
 
 </head>
 <body>
@@ -16,21 +16,23 @@
     <script id="replace_with_navbar" src="/utils/nav.js"></script>
 </header>
 
-
+<div id="form-container">
     <form id="idForm">
         <h2>Log In</h2>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email">
+        <input id="email" name="email" type="text">
         <br><br>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input id="password" name="password" required type="password">
         <br><br>
-        <button type="submit"> Submit </button>
+        <button type="submit"> Submit</button>
         <br><br>
         <div>Don't have an account ? <a href="/pages/connexion/signin.html">Sign In</a></div>
     </form>
-
-
+    <div>
+        <img src="/images/logo-img.png">
+    </div>
+</div>
 
 
 </body>

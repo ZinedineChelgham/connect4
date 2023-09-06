@@ -16,14 +16,14 @@ if (user !== 'undefined') {
 let gameType = localStorage.getItem("gameType")
 
 
-document.getElementById('username').textContent = user.username !== null ? user.username : 1;
+document.getElementById('username').textContent = user.username !== null ? user.username : "Player 1";
 if (gameType === "pve" || gameType === "3minChallenge" || gameType === "15MovesChallenge" || gameType === "resume" || gameType === "pve#easy" || gameType === "pve#medium")
     document.getElementById('opponent').textContent = "IA";
 else if (gameType === "friend" || gameType === "local")
     document.getElementById('opponent').textContent = "Friend";
 else if (gameType === "pvp") document.getElementById('opponent').textContent = "Opponent";
 
-else if (gameType === "local") document.getElementById('opponent').textContent = 2;
+else if (gameType === "local") document.getElementById('opponent').textContent = "Player 2";
 
 
 async function updateBoard(newBoard) {
@@ -126,7 +126,7 @@ function initGame() {
     }
     addInvisibleRow() // to add a circle on top of the board
 
-    if (user && (gameType === "local" || gameType.includes("pve") || gameType === "resume")) {
+    if (user && (gameType.includes("pve") || gameType === "resume")) {
         let b = document.getElementById("b-save-game")
         b.style.visibility = "visible"
         if (b) b.addEventListener("click", handleSaveGameRequest)
@@ -299,7 +299,7 @@ function showEndGameModal(winnerPlayer) {
         if (gameType === "local") {
             winner.classList.add("green-title")
             winner.innerHTML = "GG WP!"
-            points.innerHTML = `It was a close one... or not?`
+            points.innerHTML = `It was a close one... or maybe not?`
         } else {
             if (winnerPlayer === player) {
                 winner.classList.add("green-title")

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #F4F4F4;
+    background: var(--main-color);
 }
 
 h1 {

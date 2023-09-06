@@ -14,23 +14,33 @@
   <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<header>
+    <script id="replace_with_navbar" src="/utils/nav.js"></script>
+</header>
 <h1>Edit Profile</h1>
-<form>
-  <div>
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
-  </div>
-  <div>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email">
-  </div>
-  <div>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
-  </div>
-  <div>
-    <label for="confirm-password">Confirm Password:</label>
-    <input type="password" id="confirm-password" name="confirm-password">
-  </div>
-  <button type="submit" id="save-profile-btn">Save Changes</button>
-</form>
+
+<div id="form-container">
+  <form>
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div>
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password">
+    </div>
+    <button type="submit" id="save-profile-btn">Save</button>
+  </form>
+
+</div>
+</body>
+</html>
+```

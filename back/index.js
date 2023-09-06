@@ -49,7 +49,5 @@ const { Server } = require("socket.io");
 const io = new Server(server);
 const sockets = require('./socket/sockets.js')
 sockets.handleGameModesConnections(io)
-module.exports = {
-    io
-}
+module.exports = { io }
 

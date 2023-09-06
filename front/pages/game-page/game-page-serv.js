@@ -168,7 +168,7 @@ socket.on('connect', () => {
 
     if(typeOfGame.includes("pve")) {
         document.getElementById("opponent").innerText = "Robot"
-        document.getElementById("username").innerText = "User";
+        document.getElementById("username").innerText = "Guest";
     }
 
 })

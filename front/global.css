@@ -1,0 +1,6 @@
+/* global.css */
+
+:root {
+    --main-color: radial-gradient(circle, rgba(63,136,251,1) 0%, rgba(70,227,252,1) 100%);
+    --secondary-color: rgb(255, 255, 255);
+}

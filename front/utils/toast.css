@@ -3,12 +3,11 @@
     left: 50%;
     transform: translate(-50%);
     width: 35%;/* red background color */
-    color: #fff;
     text-align: center;
     padding: 10px;
     display: none;
     border-radius: 11px; /* rounded corners */
-    font-size: 28px; /* larger font size */
+    font-size: 25px; /* larger font size */
     font-weight: bold; /* bold font weight */
     font-family: Gabriola, cursive, sans-serif;
     z-index: 2;
@@ -24,7 +23,7 @@
 }
 
 .warning{
-    background-color: #fa8704;
+ background-color: #ed6c02;
 }
 
 

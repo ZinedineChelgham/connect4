@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-
-    <link rel="stylesheet" href="./home.css">
-    <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
-    <script src="./home.js" defer></script>
-    <script src="/chat/chat.js" defer></script>
-    <link rel="stylesheet" href="/chat/chat.css">
+    <link rel="icon" href="../../images/logo.ico?v=1.1"> <!-- force browser re-caching -->
+    <link href="./home.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/d3ba58047a.js"></script>
+    <script defer src="./home.js"></script>
     <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
     <script src="../../utils/toast.js"></script>
+    <link rel="stylesheet" href="../../header/header.css">
+    <script src="../../header/header.js"></script>
 </head>
 <body>
+<header>
+    <script id="replace_with_navbar" src="../../utils/nav.js"></script>
+</header>
+
 <h2>Lets Game ! </h2>
 <div id="card-container">
-    <div id="card-local" class="card">
+    <div class="card" id="card-local">
         <h3>Play locally</h3>
-        <div id="card-local-sel" class="card-choice">
+        <div class="card-choice" id="card-local-sel">
             <div class="logo-text-assoc">
                 <div><i class="fa-solid fa-robot fa-2xl fa-bounce"></i></div>
                 <p>Against Robot</p>
@@ -28,22 +32,18 @@
             </div>
         </div>
     </div>
-    <div id="card-online" class="card card-locked">
+    <div class="card card-locked" id="card-online">
         <h3>Play online</h3>
-        <div id="card-online-sel" class="card-choice">
+        <div class="card-choice" id="card-online-sel">
             <div class="logo-text-assoc">
                 <div id="logo-rand-opp"><i class="fa-solid fa-shuffle fa-2xl fa-bounce"></i></div>
                 <p>Random opponent</p>
             </div>
-            <!-- <div class="logo-text-assoc">
-                <div><i class="fa-solid fa-address-book fa-2xl fa-bounce"></i></div>
-                <p>Against friend</p>
-            </div>-->
             <div class="logo-text-assoc">
                 <div><i class="fa-sharp fa-solid fa-floppy-disk fa-2xl fa-bounce"></i></div>
                 <p>Load game</p>
             </div>
-            <div id="logo-challenges" class="logo-text-assoc">
+            <div class="logo-text-assoc" id="logo-challenges">
                 <div><i class="fa-sharp fa-solid fa-trophy fa-2xl fa-bounce"></i></div>
                 <p>See Challenges</p>
             </div>
@@ -53,22 +53,22 @@
 </div>
 <p>&copy;<span id="year"></span>GangOfFour</p>
 
-<div id="myModal" class="modal">
+<div class="modal" id="myModal">
     <div class="modal-content">
         <span class="close">&times;</span>
         <div id="turn-container">
-            <div><p>Who play first ?</p></div>
-            <span class="turn-container-choice">You</span>
+            <div><h3>Who play first ?</h3></div>
+            <p class="turn-container-choice">You</p>
             <label class="switch">
-                <input id="cb" type="checkbox" checked>
+                <input checked id="cb" type="checkbox">
                 <span class="slider round"></span>
             </label>
-            <span class="turn-container-choice">Him</span>
+            <p class="turn-container-choice">Him</p>
         </div>
 
         <div id="separator"></div>
 
-        <p>Choose difficulty</p>
+        <h3>Choose difficulty</h3>
         <div class="diff-logo-text-assoc-container">
             <div class="logo-text-assoc">
                 <div><i class="fa-solid fa-baby-carriage fa-2xl fa-bounce"></i></div>

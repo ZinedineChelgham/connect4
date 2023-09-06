@@ -1,4 +1,6 @@
-# PS8
+# Full stack connect4 game interpretation
+
+![img.png](img.png)
 
 The code of this repo is split in 2 folders:
 * api/ manages the server. It contains a server which differentiate REST requests from HTTP file requests, and so

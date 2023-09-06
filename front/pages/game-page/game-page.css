@@ -9,17 +9,18 @@
 
 body {
   text-align: center;
-  background-color: #F0F8FF;
+  background: var(--main-color);
 }
 body #winner {
   margin-top: 20px;
 }
 body p {
-  font-family: fantasy;
+  font-family: Gabriola, cursive;
   font-size: 1.5em;
+  font-weight: bold;
 }
 body h1, body h2, body h3 {
-  font-family: fantasy;
+  font-family: Gabriola, cursive;
   font-size: 2.5em;
 }
 body #matchup {
@@ -69,7 +70,7 @@ body #top-row {
   align-items: center;
   width: 550px;
   height: 60px;
-  margin: 15px auto 10px;
+  margin: 10px auto 10px;
 }
 body #board {
   display: flex;
@@ -79,7 +80,7 @@ body #board {
   align-items: center;
   width: 550px;
   height: 440px;
-  background-color: #87CEFA;
+  background: var(--main-color);
   border: 9px solid black;
   border-radius: 4%;
   margin: 0 auto;
@@ -88,8 +89,7 @@ body #board > div {
   border-radius: 50%;
 }
 body #board .show-col {
-  background-color: #87CEFA;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 body .circle {
   height: 60px;
@@ -169,7 +169,7 @@ body #end-game-modal #btn-group {
 body #end-game-modal #btn-group > button {
   align-self: flex-end;
   text-align: center;
-  font-family: fantasy;
+  font-family: Gabriola, cursive;
   background-color: #F0F8FF;
   font-size: 1em;
   width: 75%;
@@ -270,7 +270,7 @@ body .spinner-dot:nth-child(3) {
 }
 
 .purple-circle {
-  background-color: #F0F8FF;
+
 }
 
 .raindrop {

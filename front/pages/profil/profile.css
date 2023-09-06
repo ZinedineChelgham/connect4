@@ -65,7 +65,7 @@ label {
 
 span {
     font-size: 1.7rem;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #lab-challenge{
@@ -105,7 +105,7 @@ div {
 
 label {
     display: inline-block;
-    width: 100px;
+    width: fit-content;
 }
 
 div > button{

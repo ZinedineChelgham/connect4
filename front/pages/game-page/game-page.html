@@ -11,8 +11,13 @@
     <link rel="stylesheet" href="/chat/chat.css">
     <script src="https://kit.fontawesome.com/d3ba58047a.js" crossorigin="anonymous"></script>
     <script src="../../utils/toast.js"></script>
+    <link rel="stylesheet" href="../../header/header.css">
+    <script src="../../header/header.js" defer></script>
 </head>
 <body>
+<header>
+    <script id="replace_with_navbar" src="../../utils/nav.js"></script>
+</header>
     <main>
         <div id="matchup">
             <div id="button-container">
@@ -27,12 +32,12 @@
             </div>
             <div id="p1">
                 <div class="matchup-circle red-circle"></div>
-                <p id="username">1</p>
+                <p id="username">Player 1</p>
             </div>
             <p>VS</p>
             <div id="p2">
                 <div class="matchup-circle yellow-circle"></div>
-                <p id="opponent">2</p>
+                <p id="opponent">Player 2</p>
             </div>
         </div>
         <p id="countdown"></p>
